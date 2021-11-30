@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include("../partials/header.ejs",{login:"login"}) %> 
+
+<style>
+    .fa-eye:hover{
+        cursor: pointer;
+
+    }
+    .fa-eye-slash:hover{
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container-fluid mt-2">
+        <div class="row d-flex justify-content-between rounded">
+            <div class="col-md-6 login bg-danger rounded">
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="">Username & email</label>
+                        <input type="text"
+                          class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="">
+                      </div>
+                      <div class="form-group">
+                        <label for="">password</label>
+                        <input type="password"
+                          class="form-control" name="password" id="password" aria-describedby="helpId" placeholder="">
+                          <i class="fa fa-eye-slash float-right mb-2" style="margin-top: -1.6rem;margin-right: 1rem;" aria-hidden="true"></i>
+                          <i class="fa fa-eye float-right" aria-hidden="true" style="margin-top: -1.6rem;margin-right: 1rem;"></i>
+                      </div>
+
+                      <button class="btn btn-success">
+                          Login
+                      </button>
+                      
+                    
+
+
+                </form>
+                
+                
+                
+
+            </div>
+            <div class="col-md-6 create-account bg-warning rounded">
+                <form action="/post" method="POST">
+                    <div class="form-group">
+                        <label for="">email</label>
+                        <input type="text"
+                          class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="">password</label>
+                        <input type="password"
+                          class="form-control" name="password" id="password" aria-describedby="helpId" placeholder="" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="">again password</label>
+                        <input type="password"
+                          class="form-control" name="apassword" id="apassword" aria-describedby="helpId" placeholder="" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="">Mobile number</label>
+                        <input type="tel"
+                          class="form-control" name="number" id="number" aria-describedby="helpId" placeholder="" required>
+                      </div>
+
+
+                      <button class="btn btn-danger mb-2">
+                         Create Account
+                      </button>
+                    
+
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
